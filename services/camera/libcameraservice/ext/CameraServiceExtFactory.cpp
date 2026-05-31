@@ -76,7 +76,7 @@ int CameraServiceExtFactory::onTransact(uint32_t code, const Parcel& data, Parce
     ensureLoaded();
     if (sExtObject == nullptr) {
         if (sFunctionTable == nullptr) {
-            ALOGV("CameraServiceExtFactory::onTransact: extension not loaded");
+            ALOGE("CameraServiceExtFactory::onTransact: extension not loaded");
             return -1;
         }
         void* actualFunc = *(void**)sFunctionTable;
